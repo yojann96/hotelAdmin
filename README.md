@@ -4,7 +4,7 @@ Sistema para gestión de hoteles, tipos de habitación y acomodaciones, desarrol
 
 ---
 
-## 🚀 ¿Qué necesito antes de empezar?
+## 🚀 ¿Qué necesito antes de empezar?...
 
 ### 🛠 Requisitos previos
 - PHP 8.2 o superior
@@ -66,10 +66,11 @@ o Crear la base de datos manualemnte en mysql: CREATE DATABASE hotel_system;
 cd ../hotel-frontend
 npm install
 npm run dev
+npm install vue-router@4
+npm install @vitejs/plugin-vue --save-dev
+npm install axios
 
-
-¿Cómo pruebo que todo funciona?
-Ve al navegador y abre http://localhost:5173
-Verás la lista de hoteles (si ya existen)
-Desde allí podrás registrar nuevos hoteles y habitaciones
-
+5.  Creación/migración de la base de datos:
+Ejecutar script de archivo: ...hotelAdmin\hotel-backend\database\hotel_system.sql
+Recordar modificar archivo .env para el backend según credenciales
+Ver ejemplo en archivo hotel-backend\.env - ejemplo
