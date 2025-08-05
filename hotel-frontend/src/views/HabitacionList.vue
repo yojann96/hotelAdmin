@@ -55,22 +55,6 @@ const cargarHabitaciones = async () => {
   }
 };
 
-const editarHabitacion = (habitacion) => {
-  habitacionSeleccionada.value = { ...habitacion };
-  editando.value = true;
-  mostrarFormulario.value = true;
-};
-
-const eliminarHabitacion = async (id) => {
-  if (!confirm('¿Está seguro de eliminar esta habitación?...')) return;
-  try {
-    await axios.delete(`/api/habitaciones/${id}`);
-    await cargarHabitaciones();
-  } catch (error) {
-    console.error('Error eliminando habitación:', error);
-  }
-};
-
 const cancelarFormulario = () => {
   habitacionSeleccionada.value = null;
   editando.value = false;
