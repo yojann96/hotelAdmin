@@ -55,10 +55,10 @@ php artisan serve
 El backend estará disponible en http://localhost:8000
 
 3. Restaura la base de datos desde el archivo dump
-En una consola de PostgreSQL:
-psql -U postgres -d hotel_system < ../dump.sql
-o Crear la base de datos manualemnte en mysql: CREATE DATABASE hotel_system;
-
+En una consola de PostgreSQL o MYSQL:
+Ejecutar scripts de archivo: ...\hotel-backend\database\hotel_system.sql
+Recordar modificar archivo .env para el backend según credenciales
+Ver ejemplo en archivo hotel-backend\.env - ejemplo
 
 --------------
 
@@ -70,7 +70,4 @@ npm install vue-router@4
 npm install @vitejs/plugin-vue --save-dev
 npm install axios
 
-5.  Creación/migración de la base de datos:
-Ejecutar script de archivo: ...hotelAdmin\hotel-backend\database\hotel_system.sql
-Recordar modificar archivo .env para el backend según credenciales
-Ver ejemplo en archivo hotel-backend\.env - ejemplo
+
