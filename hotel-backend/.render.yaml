@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: hotel-api
+    rootDir: hotel-backend
+    runtime: php
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+      php artisan config:cache
+      php artisan migrate --force
+    startCommand: php artisan serve --host 0.0.0.0 --port 10000
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:TU_APP_KEY_GENERADA
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://hotel-api.onrender.com
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: TU_HOST_DB
+      - key: DB_PORT
+        value: 3306
+      - key: DB_DATABASE
+        value: TU_BD
+      - key: DB_USERNAME
+        value: TU_USUARIO
+      - key: DB_PASSWORD
+        value: TU_PASSWORD
